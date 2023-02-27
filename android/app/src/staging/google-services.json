@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "49363471592",
+    "project_id": "louhie-20de5",
+    "storage_bucket": "louhie-20de5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:49363471592:android:694cbabd45852304924d5d",
+        "android_client_info": {
+          "package_name": "com.app.louhie.staging"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "49363471592-5mt96m70oe356b3042avvdpu0l4vb67i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVL3Eu9CoxYLqPebgPjg6nt8Ez6AdZtL8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "49363471592-5mt96m70oe356b3042avvdpu0l4vb67i.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "49363471592-5jbhsavvpu0bav1v7uvcpug95d5vm084.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.app.louhie"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
