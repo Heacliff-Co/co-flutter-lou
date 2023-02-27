@@ -7,7 +7,7 @@ import 'package:louhie/features/post/presentation/home_page.dart';
 const mainRoutes = <AutoRoute>[
   AutoRoute(
     page: MainPage,
-    initial: false,
+    initial: true,
     children: [
       AutoRoute(page: HomePage),
       AutoRoute(page: CollectionsPage),
