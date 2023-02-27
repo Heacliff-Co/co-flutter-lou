@@ -58,13 +58,13 @@ class DefaultFirebaseOptions {
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyAkWff8DcTgZEC62yTSak6B9p2Y4JQ8_Jg',
-    appId: '1:1060161913171:ios:0cf632f7b86fcbf055a1a6',
-    messagingSenderId: '1060161913171',
-    projectId: 'flutter-bond-staging',
-    storageBucket: 'flutter-bond-staging.appspot.com',
+    apiKey: 'AIzaSyBKlJYtua8-b1JfJJcSjIkLMf0H_6ZcoY4',
+    appId: '1:49363471592:ios:879e5f8565fbacae924d5d',
+    messagingSenderId: '49363471592',
+    projectId: 'louhie-20de5',
+    storageBucket: 'louhie-20de5.appspot.com',
     iosClientId:
-        '1060161913171-dqkjiup8cs81e30id52dn0oevis694sh.apps.googleusercontent.com',
-    iosBundleId: 'sa.example.bond.staging',
+        '49363471592-tdgtj4llr13ie3pktc6n2p63q6pflcbo.apps.googleusercontent.com',
+    iosBundleId: 'com.app.louhie.staging',
   );
 }

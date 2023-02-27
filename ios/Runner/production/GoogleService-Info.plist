@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>766000556009-mojgehr55p2350f1mno3lgjfnamak00t.apps.googleusercontent.com</string>
+	<string>49363471592-tdgtj4llr13ie3pktc6n2p63q6pflcbo.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.766000556009-mojgehr55p2350f1mno3lgjfnamak00t</string>
+	<string>com.googleusercontent.apps.49363471592-tdgtj4llr13ie3pktc6n2p63q6pflcbo</string>
 	<key>API_KEY</key>
-	<string>AIzaSyDVvGOc_wPjffCwxy9BlL5kweFhp7-rfYg</string>
+	<string>AIzaSyBKlJYtua8-b1JfJJcSjIkLMf0H_6ZcoY4</string>
 	<key>GCM_SENDER_ID</key>
-	<string>766000556009</string>
+	<string>49363471592</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>sa.example.bond</string>
+	<string>com.app.louhie.staging</string>
 	<key>PROJECT_ID</key>
-	<string>flutter-bond-87485</string>
+	<string>louhie-20de5</string>
 	<key>STORAGE_BUCKET</key>
-	<string>flutter-bond-87485.appspot.com</string>
+	<string>louhie-20de5.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:766000556009:ios:732934f0c9433eedd0cd78</string>
+	<string>1:49363471592:ios:879e5f8565fbacae924d5d</string>
 </dict>
 </plist>
