@@ -8,7 +8,7 @@ class AuthGuard extends AutoRouteGuard {
     NavigationResolver resolver,
     StackRouter router,
   ) async {
-    if (Auth.check()) {
+    if (!Auth.check()) {
       resolver.next(true);
     } else {
       final result = await router.push<bool>(const LoginRoute());
