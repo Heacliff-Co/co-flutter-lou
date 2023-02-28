@@ -2,7 +2,7 @@ import 'package:louhie/features/auth/auth.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 import 'package:get_it/get_it.dart';
-import 'package:one_studio_core/core.dart';
+import 'package:co_flutter_core/core.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 
 import '../config/api.dart';

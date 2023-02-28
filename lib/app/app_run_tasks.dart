@@ -6,7 +6,7 @@ import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
-import 'package:one_studio_core/core.dart';
+import 'package:co_flutter_core/core.dart';
 import 'package:universal_platform/universal_platform.dart';
 
 import 'injection_container.dart';

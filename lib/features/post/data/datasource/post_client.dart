@@ -1,6 +1,6 @@
 import 'package:auto_route/annotations.dart';
 import 'package:louhie/features/post/data/models/post.dart';
-import 'package:one_studio_core/core.dart';
+import 'package:co_flutter_core/core.dart';
 import 'package:retrofit/retrofit.dart';
 import 'package:dio/dio.dart';
 

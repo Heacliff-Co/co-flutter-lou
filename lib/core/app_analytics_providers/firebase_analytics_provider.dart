@@ -1,7 +1,7 @@
 import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/foundation.dart';
 import 'package:intl/intl.dart';
-import 'package:one_studio_core/core.dart';
+import 'package:co_flutter_core/core.dart';
 
 class FirebaseAnalyticsProvider extends AnalyticsProvider {
   FirebaseAnalyticsProvider(this._firebaseAnalytics);

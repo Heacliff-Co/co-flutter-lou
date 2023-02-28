@@ -11,9 +11,9 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   google_fonts: ^3.0.1
-  one_studio_core:
+  co_flutter_core:
     git:
-      url: https://github.com/onestudio-co/one-studio-core.git
+      url: https://github.com/Heacliff-Co/co-flutter-core.git
       ref: main
   flutter_svg: ^1.0.3
   intl: ^0.17.0

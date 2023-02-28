@@ -4,7 +4,7 @@ import 'package:louhie/core/app_extensions.dart';
 import 'package:louhie/routes/app_router.dart';
 import 'package:firebase_remote_config/firebase_remote_config.dart';
 import 'package:flutter/material.dart';
-import 'package:one_studio_core/core.dart';
+import 'package:co_flutter_core/core.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 
 import 'models/current_version.dart';

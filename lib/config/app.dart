@@ -1,5 +1,5 @@
 import 'package:louhie/providers/notifications_service_provider.dart';
-import 'package:one_studio_core/core.dart';
+import 'package:co_flutter_core/core.dart';
 
 import '../features/auth/auth_service_provider.dart';
 import '../features/post/post_service_provider.dart';

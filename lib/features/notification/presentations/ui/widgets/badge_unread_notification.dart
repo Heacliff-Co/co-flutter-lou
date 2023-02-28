@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:one_studio_core/core.dart';
+import 'package:co_flutter_core/core.dart';
 
 class BadgeUnreadNotification extends StatelessWidget {
   const BadgeUnreadNotification({

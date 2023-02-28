@@ -1,4 +1,4 @@
-import 'package:one_studio_core/core.dart';
+import 'package:co_flutter_core/core.dart';
 
 class SignInEvent extends AnalyticsEvent with UserSignedIn {
   final int userId;

@@ -50,20 +50,21 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyDfL8g3p3PmS3kUNPDxn5_RaKKDmFcZKKw',
-    appId: '1:766000556009:android:99573bfe24c57357d0cd78',
-    messagingSenderId: '766000556009',
-    projectId: 'flutter-bond-87485',
-    storageBucket: 'flutter-bond-87485.appspot.com',
+    apiKey: 'AIzaSyDVL3Eu9CoxYLqPebgPjg6nt8Ez6AdZtL8',
+    appId: '1:49363471592:android:694cbabd45852304924d5d',
+    messagingSenderId: '49363471592',
+    projectId: 'louhie-20de5',
+    storageBucket: 'louhie-20de5.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyDVvGOc_wPjffCwxy9BlL5kweFhp7-rfYg',
-    appId: '1:766000556009:ios:732934f0c9433eedd0cd78',
-    messagingSenderId: '766000556009',
-    projectId: 'flutter-bond-87485',
-    storageBucket: 'flutter-bond-87485.appspot.com',
-    iosClientId: '766000556009-mojgehr55p2350f1mno3lgjfnamak00t.apps.googleusercontent.com',
-    iosBundleId: 'sa.example.bond',
+    apiKey: 'AIzaSyBKlJYtua8-b1JfJJcSjIkLMf0H_6ZcoY4',
+    appId: '1:49363471592:ios:879e5f8565fbacae924d5d',
+    messagingSenderId: '49363471592',
+    projectId: 'louhie-20de5',
+    storageBucket: 'louhie-20de5.appspot.com',
+    iosClientId:
+        '49363471592-tdgtj4llr13ie3pktc6n2p63q6pflcbo.apps.googleusercontent.com',
+    iosBundleId: 'com.app.louhie.staging',
   );
 }

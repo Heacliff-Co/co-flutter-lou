@@ -8,7 +8,7 @@ import 'package:louhie/features/post/presentation/home_page.dart';
 import 'package:louhie/routes/guards/auth_guard.dart';
 import 'package:louhie/routes/router_helpers.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:one_studio_core/core.dart';
+import 'package:co_flutter_core/core.dart';
 
 import '../features/collections/presentation/collections_page.dart';
 import '../features/main/presentation/main_page.dart';

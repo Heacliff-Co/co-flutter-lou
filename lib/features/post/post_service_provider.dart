@@ -1,7 +1,7 @@
 import 'package:louhie/features/post/data/datasource/post_client.dart';
 import 'package:louhie/features/post/presentation/cubit/post_cubit.dart';
 import 'package:get_it/get_it.dart';
-import 'package:one_studio_core/core.dart';
+import 'package:co_flutter_core/core.dart';
 
 import 'data/models/post.dart';
 

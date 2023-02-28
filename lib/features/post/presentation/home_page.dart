@@ -4,7 +4,7 @@ import 'package:louhie/features/post/presentation/cubit/post_cubit.dart';
 import 'package:louhie/routes/app_router.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:one_studio_core/core.dart';
+import 'package:co_flutter_core/core.dart';
 
 import 'home_app_bar.dart';
 import 'post_item.dart';

@@ -1,6 +1,6 @@
 import 'package:louhie/core/app_localizations.dart';
 import 'package:flutter/material.dart';
-import 'package:one_studio_core/core.dart';
+import 'package:co_flutter_core/core.dart';
 
 import 'widgets/notification_item.dart';
 

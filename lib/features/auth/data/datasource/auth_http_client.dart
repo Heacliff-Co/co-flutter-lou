@@ -1,6 +1,6 @@
 import 'package:louhie/features/auth/data/models/user.dart';
 import 'package:louhie/features/auth/data/models/user_meta.dart';
-import 'package:one_studio_core/core.dart';
+import 'package:co_flutter_core/core.dart';
 import 'package:retrofit/retrofit.dart';
 import 'package:dio/dio.dart';
 

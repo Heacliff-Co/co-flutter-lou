@@ -6,7 +6,7 @@ import 'package:louhie/features/post/data/datasource/post_client.dart';
 import 'package:louhie/features/post/data/models/post.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:one_studio_core/core.dart';
+import 'package:co_flutter_core/core.dart';
 
 typedef PostRequestState = RequestState<ListResponse<Post>, ServerException>;
 

@@ -2,7 +2,7 @@ import 'package:louhie/features/update_app/update_app_service.dart';
 import 'package:louhie/features/app/app_bloc.dart';
 import 'package:louhie/features/app/data/app_local_data_source.dart';
 import 'package:get_it/get_it.dart';
-import 'package:one_studio_core/core.dart';
+import 'package:co_flutter_core/core.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../routes/app_router.dart';

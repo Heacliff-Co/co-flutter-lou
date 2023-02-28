@@ -1,4 +1,4 @@
-import 'package:one_studio_core/core.dart';
+import 'package:co_flutter_core/core.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 
 import '../app/environments/env.dart';

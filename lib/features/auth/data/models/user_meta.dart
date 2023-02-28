@@ -1,8 +1,9 @@
 import 'package:equatable/equatable.dart';
 import 'package:json_annotation/json_annotation.dart';
-import 'package:one_studio_core/core.dart';
+import 'package:co_flutter_core/core.dart';
 
 part 'user_meta.g.dart';
+
 @JsonSerializable(explicitToJson: true)
 class UserMeta extends Equatable with Jsonable {
   final String token;
@@ -17,5 +18,4 @@ class UserMeta extends Equatable with Jsonable {
 
   @override
   List<Object?> get props => [token];
-
 }

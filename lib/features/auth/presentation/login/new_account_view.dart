@@ -3,7 +3,7 @@ import 'package:louhie/core/app_localizations.dart';
 import 'package:louhie/routes/app_router.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:one_studio_core/core.dart';
+import 'package:co_flutter_core/core.dart';
 
 class NewAccountView extends StatelessWidget {
   const NewAccountView({Key? key}) : super(key: key);

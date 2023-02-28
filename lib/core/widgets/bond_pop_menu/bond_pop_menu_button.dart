@@ -5,7 +5,7 @@ import 'package:louhie/features/auth/auth.dart';
 import 'package:louhie/routes/app_router.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:one_studio_core/core.dart';
+import 'package:co_flutter_core/core.dart';
 
 import 'bond_popup_menu_item.dart';
 

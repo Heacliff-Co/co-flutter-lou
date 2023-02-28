@@ -1,6 +1,6 @@
 import 'package:louhie/core/app_localizations.dart';
 import 'package:louhie/routes/app_router.dart';
-import 'package:one_studio_core/core.dart';
+import 'package:co_flutter_core/core.dart';
 
 class FieldBlocValidator {
   FieldBlocValidator._();
