@@ -1,6 +1,7 @@
 library app_router;
 
 import 'package:auto_route/auto_route.dart';
+import 'package:louhie/features/manga/presentation/manga_page.dart';
 import 'package:louhie/features/update_app/routes.dart';
 import 'package:louhie/features/auth/auth.dart';
 import 'package:louhie/features/notification/presentations/ui/notifications_page.dart';

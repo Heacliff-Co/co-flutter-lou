@@ -1,12 +1,13 @@
 import 'dart:developer';
 
+import 'package:louhie/config/environments.dart';
 import 'package:louhie/features/auth/auth.dart';
-import 'package:louhie/features/auth/data/datasource/auth_http_client.dart';
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:co_flutter_core/core.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:universal_platform/universal_platform.dart';
 
 import 'injection_container.dart';
@@ -16,9 +17,9 @@ class RunAppTasks extends RunTasks {
   Future<void> beforeRun(WidgetsBinding widgetsBinding) async {
     FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
     await init();
-    if (!Auth.check()) {
-      await Auth.loginAnonymous();
-    }
+    // if (!Auth.check()) {
+    //   await Auth.loginAnonymous();
+    // }
     FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterFatalError;
     FlutterNativeSplash.remove();
   }
@@ -43,22 +44,22 @@ class RunAppTasks extends RunTasks {
           ?.createNotificationChannel(channel);
     }
     sl<PushNotificationsProviders>().listen();
-    if (Auth.check()) {
-      sl<NotificationCenterProvider>().load();
-      sl<NotificationCenterProvider>().listen();
+    // if (Auth.check()) {
+    //   sl<NotificationCenterProvider>().load();
+    //   sl<NotificationCenterProvider>().listen();
 
-      final firebaseMessaging =
-          sl<PushNotificationProvider>(instanceName: 'firebase_messaging');
-      final fcmToken = await firebaseMessaging.token;
-      if (fcmToken != null) {
-        Map<String, String?> body = {
-          'device_id': await deviceIdInfo(),
-          'device_type': getDeviceType(),
-          'token': fcmToken,
-        }..removeWhere((key, value) => value == null);
-        await sl<AuthHttpClient>().updateToken(body);
-      }
-    }
+    //   final firebaseMessaging =
+    //       sl<PushNotificationProvider>(instanceName: 'firebase_messaging');
+    //   final fcmToken = await firebaseMessaging.token;
+    //   if (fcmToken != null) {
+    //     Map<String, String?> body = {
+    //       'device_id': await deviceIdInfo(),
+    //       'device_type': getDeviceType(),
+    //       'token': fcmToken,
+    //     }..removeWhere((key, value) => value == null);
+    //     await sl<AuthHttpClient>().updateToken(body);
+    //   }
+    // }
   }
 
   @override

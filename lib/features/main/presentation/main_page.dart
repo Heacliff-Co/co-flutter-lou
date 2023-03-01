@@ -1,5 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:louhie/core/app_localizations.dart';
+import 'package:louhie/features/manga/presentation/manga_page.dart';
 import 'package:louhie/features/update_app/update_app_service.dart';
 import 'package:louhie/routes/app_router.dart';
 import 'package:flutter/material.dart';
@@ -23,7 +24,7 @@ class _MainPageState extends State<MainPage> {
   Widget build(BuildContext context) {
     return AutoTabsScaffold(
       routes: const [
-        HomeRoute(),
+        MangaRoute(),
         CollectionsRoute(),
         MoreRoute(),
       ],

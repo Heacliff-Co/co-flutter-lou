@@ -15,6 +15,10 @@ abstract class EnvStaging {
   @EnviedField(varName: 'RECEIVE_DATA_WHEN_STATUS_ERROR')
   static const bool receiveDateWhenStatusError =
       _EnvStaging.receiveDateWhenStatusError;
+  @EnviedField(varName: 'SUPABASE_URL')
+  static const String supabaseURL = _EnvStaging.supabaseURL;
+  @EnviedField(varName: 'SUPABASE_KEY')
+  static const String supabaseKey = _EnvStaging.supabaseKey;
 
   static dynamic get(String key) {
     switch (key) {
@@ -28,6 +32,10 @@ abstract class EnvStaging {
         return receiveTimeOut;
       case 'RECEIVE_DATA_WHEN_STATUS_ERROR':
         return receiveDateWhenStatusError;
+      case 'SUPABASE_URL':
+        return supabaseURL;
+      case 'SUPABASE_KEY':
+        return supabaseKey;
       default:
         return null;
     }

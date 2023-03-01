@@ -91,6 +91,12 @@ class _$AppRouter extends RootStackRouter {
         child: const MorePage(),
       );
     },
+    MangaRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: WrappedRoute(child: const MangaPage()),
+      );
+    },
   };
 
   @override
@@ -114,11 +120,16 @@ class _$AppRouter extends RootStackRouter {
               path: 'more-page',
               parent: MainRoute.name,
             ),
+            RouteConfig(
+              MangaRoute.name,
+              path: 'manga-page',
+              parent: MainRoute.name,
+            ),
           ],
         ),
         RouteConfig(
           LoginRoute.name,
-          path: '/login-page',
+          path: '/',
         ),
         RouteConfig(
           RegisterRoute.name,
@@ -159,7 +170,7 @@ class LoginRoute extends PageRouteInfo<void> {
   const LoginRoute()
       : super(
           LoginRoute.name,
-          path: '/login-page',
+          path: '/',
         );
 
   static const String name = 'LoginRoute';
@@ -313,4 +324,16 @@ class MoreRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'MoreRoute';
+}
+
+/// generated route for
+/// [MangaPage]
+class MangaRoute extends PageRouteInfo<void> {
+  const MangaRoute()
+      : super(
+          MangaRoute.name,
+          path: 'manga-page',
+        );
+
+  static const String name = 'MangaRoute';
 }
