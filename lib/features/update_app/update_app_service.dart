@@ -18,6 +18,10 @@ class UpdateAppService {
 
   void call() async {
     try {
+      await remoteConfig.activate();
+// Only fetch after a delay to prevent an internal bug from occurring
+// See https://github.com/FirebaseExtended/flutterfire/issues/6196
+      await Future.delayed(const Duration(seconds: 1));
       await remoteConfig.fetchAndActivate();
       final jsonString = remoteConfig.getString('appCurrentVersion');
       final remoteConfigVersion =
