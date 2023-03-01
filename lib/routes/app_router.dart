@@ -33,3 +33,5 @@ part 'app_router.gr.dart';
 class AppRouter extends _$AppRouter {
   AppRouter(AuthGuard authGuard) : super(authGuard: authGuard);
 }
+
+AppRouter get appRouter => sl<AppRouter>();

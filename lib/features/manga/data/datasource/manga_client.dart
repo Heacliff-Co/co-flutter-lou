@@ -1,14 +1,20 @@
+import 'dart:convert';
+
+import 'package:louhie/config/api.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 import '../model/manga.dart';
 
 class MangaClient {
-  final Supabase supabase;
+  final SupabaseClient supabase;
   MangaClient({required this.supabase});
 
-  SupabaseClient get supabaseClient => supabase.client;
-
   Future<List<Manga>> getTrendingManga() async {
-    return [];
+    final response = (await supabase
+        .from(SupabaseConfig.wdManga)
+        .select()
+        .order(SupabaseConfig.trending, ascending: false)
+        .limit(15));
+    return <Manga>[for (final e in response) Manga.fromJson(e)];
   }
 }

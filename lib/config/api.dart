@@ -8,3 +8,18 @@ class ApiConfig {
   static bool receiveDataWhenStatusError =
       env('RECEIVE_DATA_WHEN_STATUS_ERROR');
 }
+
+class SupabaseConfig {
+  SupabaseConfig._();
+
+  static const String prefixDb = "wibudex_";
+  static const String wdManga = prefixDb + "manga";
+  static const String wdMangaCharacters = prefixDb + "manga_characters";
+  static const String wdMangaRecommendations =
+      prefixDb + "manga_recommendations";
+  static const String wdMangaSource = prefixDb + "manga_source";
+
+  //Column
+
+  static const String trending = "trending";
+}
