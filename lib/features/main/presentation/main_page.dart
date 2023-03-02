@@ -23,7 +23,7 @@ class _MainPageState extends State<MainPage> {
   Widget build(BuildContext context) {
     return AutoTabsScaffold(
       routes: const [
-        HomeRoute(),
+        MangaRoute(),
         CollectionsRoute(),
         MoreRoute(),
       ],
