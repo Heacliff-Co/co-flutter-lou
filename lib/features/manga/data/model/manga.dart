@@ -20,8 +20,9 @@ class Manga extends Model {
       this.updatedAt,
       this.coverImage,
       this.description,
-      this.title})
-      : super(id: -1);
+      this.title,
+      required int id})
+      : super(id: id);
 
   factory Manga.fromJson(Map<String, dynamic> json) => _$MangaFromJson(json);
 

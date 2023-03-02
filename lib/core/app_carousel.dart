@@ -25,7 +25,7 @@ class AppMangaCarousel extends StatefulWidget {
 class _AppMangaCarouselState extends State<AppMangaCarousel>
     with AutomaticKeepAliveClientMixin {
   var _currentIndex = 0;
-  final _key = const PageStorageKey(0);
+  final _key = PageStorageKey(0);
 
   @override
   Widget build(BuildContext context) {
@@ -101,7 +101,7 @@ class _AppMangaCarouselState extends State<AppMangaCarousel>
             width: MediaQuery.of(context).size.width,
             padding:
                 const EdgeInsets.only(left: 8, right: 10, top: 4, bottom: 4),
-            color: Colors.white.withOpacity(0.75),
+            color: Colors.white.withOpacity(0.65),
             child: Center(
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
