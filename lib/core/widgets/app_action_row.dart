@@ -1,7 +1,7 @@
 import 'package:co_flutter_core/core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:louhie/core/widgets/icon_text.dart';
+import 'package:louhie/core/widgets/atom/icon_text.dart';
 
 class ActionItem {
   const ActionItem(
@@ -89,9 +89,9 @@ class AppActionRow extends StatelessWidget {
           text: Text(
             action.text,
             style: context.textTheme.bodyText1!.copyWith(
-              fontSize: 12.sp,
-              fontWeight: FontWeight.w500,
-            ),
+                fontSize: 10.sp,
+                fontWeight: FontWeight.w500,
+                color: context.colorScheme.onPrimary),
           ),
         ),
       ),
@@ -106,7 +106,7 @@ class AppActionRow extends StatelessWidget {
         padding: compact
             ? const EdgeInsets.symmetric(horizontal: 0, vertical: 0) // compact
             : const EdgeInsets.symmetric(
-                horizontal: 0, vertical: 8) /* normal */,
+                horizontal: 0, vertical: 2) /* normal */,
         child: Row(
           mainAxisAlignment: compact
               ? MainAxisAlignment.spaceAround // compact

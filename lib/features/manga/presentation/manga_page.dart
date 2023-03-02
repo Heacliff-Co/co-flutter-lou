@@ -5,7 +5,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:louhie/core/widgets/app_action_row.dart';
 import 'package:louhie/core/widgets/app_carousel.dart';
+import 'package:louhie/core/widgets/app_manga_collection.dart';
+import 'package:louhie/core/widgets/atom/grid_button.dart';
 import 'package:louhie/features/main/presentation/main_app_bar.dart';
+import 'package:louhie/features/manga/data/model/manga.dart';
 import 'package:louhie/features/manga/presentation/cubit/manga_cubit.dart';
 import 'package:louhie/features/manga/presentation/widgets/manga_item.dart';
 
@@ -41,7 +44,10 @@ class MangaPage extends StatelessWidget with AutoRouteWrapper {
                         action2:
                             ActionItem.simple("Lịch sử", Icons.history, () {}),
                         action3: ActionItem.simple(
-                            "Tải xuống", Icons.download, () {}),
+                          "Tải xuống",
+                          Icons.download,
+                          () {},
+                        ),
                         action4: ActionItem.simple(
                             "Ngẫu nhiên", Icons.shuffle, () {})),
                     AppActionRow.four(
@@ -54,17 +60,8 @@ class MangaPage extends StatelessWidget with AutoRouteWrapper {
                         action4: ActionItem.simple(
                             "Xem website", Icons.open_in_browser, () {}))
                   ]),
-                  GridView.count(
-                    shrinkWrap: true,
-                    physics: const NeverScrollableScrollPhysics(),
-                    padding: const EdgeInsets.all(16),
-                    crossAxisCount: 2,
-                    childAspectRatio: 0.6,
-                    mainAxisSpacing: 6.0,
-                    crossAxisSpacing: 6.0,
-                    children:
-                        mangaList.map((e) => MangaItem(manga: e)).toList(),
-                  ),
+                  _buildCollection(
+                      context, MangaCollectionType.rankings, mangaList),
                 ],
               ))
             : const CircularProgressIndicator.adaptive(),
@@ -81,5 +78,16 @@ class MangaPage extends StatelessWidget with AutoRouteWrapper {
       BlocProvider<MangaCubit>(
           create: (context) => sl<MangaCubit>()..loadMangaTest())
     ], child: this);
+  }
+
+  Widget _buildCollection(
+      BuildContext context, MangaCollectionType type, List<Manga> mangaList) {
+    return Padding(
+      padding: EdgeInsets.only(top: 10.h),
+      child: AppMangaCollection(
+        type: type,
+        mangaList: mangaList,
+      ),
+    );
   }
 }
