@@ -2,6 +2,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:co_flutter_core/core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:louhie/core/app_carousel.dart';
 import 'package:louhie/features/main/presentation/main_app_bar.dart';
 import 'package:louhie/features/manga/presentation/cubit/manga_cubit.dart';
 import 'package:louhie/features/manga/presentation/widgets/manga_item.dart';
@@ -22,6 +23,13 @@ class MangaPage extends StatelessWidget with AutoRouteWrapper {
         success: (mangaList, loading) => SingleChildScrollView(
             child: Column(
           children: [
+            if (loading) const CircularProgressIndicator.adaptive(),
+            if (!loading)
+              AppMangaCarousel(
+                height: 200,
+                imageWidth: 150,
+                list: mangaList,
+              ),
             GridView.count(
               shrinkWrap: true,
               physics: const NeverScrollableScrollPhysics(),
@@ -32,7 +40,6 @@ class MangaPage extends StatelessWidget with AutoRouteWrapper {
               crossAxisSpacing: 6.0,
               children: mangaList.map((e) => MangaItem(manga: e)).toList(),
             ),
-            if (loading) const CircularProgressIndicator.adaptive(),
           ],
         )),
         failed: (error) => Center(
