@@ -1,5 +1,8 @@
 import 'package:co_flutter_core/core.dart';
 import 'package:json_annotation/json_annotation.dart';
+import 'package:louhie/core/models/cover_image.dart';
+import 'package:louhie/core/models/description.dart';
+import 'package:louhie/core/models/title.dart';
 
 part 'manga.g.dart';
 
@@ -9,8 +12,18 @@ class Manga extends Model {
   final DateTime? createdAt;
   @JsonKey(name: 'updated_at')
   final DateTime? updatedAt;
-
-  const Manga({this.createdAt, this.updatedAt}) : super(id: -1);
+  final int id;
+  final CoverImage? coverImage;
+  final Title? title;
+  final Description? description;
+  const Manga(
+      {this.createdAt,
+      this.updatedAt,
+      this.coverImage,
+      this.description,
+      required this.id,
+      this.title})
+      : super(id: -1);
 
   factory Manga.fromJson(Map<String, dynamic> json) => _$MangaFromJson(json);
 

@@ -2,7 +2,9 @@ import 'package:auto_route/auto_route.dart';
 import 'package:co_flutter_core/core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:louhie/features/main/presentation/main_app_bar.dart';
 import 'package:louhie/features/manga/presentation/cubit/manga_cubit.dart';
+import 'package:louhie/features/manga/presentation/widgets/manga_item.dart';
 
 class MangaPage extends StatelessWidget with AutoRouteWrapper {
   const MangaPage({Key? key}) : super(key: key);
@@ -10,7 +12,34 @@ class MangaPage extends StatelessWidget with AutoRouteWrapper {
   @override
   Widget build(BuildContext context) {
     final mangaCubit = context.watch<MangaCubit>();
-    return Container();
+    return Scaffold(
+      appBar: const MainAppBar(),
+      body: mangaCubit.state.when(
+        initial: () => const Center(
+            child: CircularProgressIndicator(
+          color: Colors.black,
+        )),
+        success: (mangaList, loading) => SingleChildScrollView(
+            child: Column(
+          children: [
+            GridView.count(
+              shrinkWrap: true,
+              physics: const NeverScrollableScrollPhysics(),
+              padding: const EdgeInsets.all(16),
+              crossAxisCount: 2,
+              childAspectRatio: 0.6,
+              mainAxisSpacing: 6.0,
+              crossAxisSpacing: 6.0,
+              children: mangaList.map((e) => MangaItem(manga: e)).toList(),
+            ),
+            if (loading) const CircularProgressIndicator.adaptive(),
+          ],
+        )),
+        failed: (error) => Center(
+          child: Text(error),
+        ),
+      ),
+    );
   }
 
   @override

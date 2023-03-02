@@ -38,6 +38,6 @@ class MangaCubit extends Cubit<ListState<Manga>> {
   Future<void> loadMangaTest() async {
     emit(state.loading());
     final response = await mangaClient?.getTrendingManga();
-    print(response);
+    emit(state.success(response ?? const ListResponse(data: [])));
   }
 }
