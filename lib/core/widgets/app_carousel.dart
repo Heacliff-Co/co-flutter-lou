@@ -4,6 +4,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:co_flutter_core/core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:louhie/core/widgets/app_network_image.dart';
 import 'package:louhie/features/manga/data/model/manga.dart';
 
@@ -113,7 +114,8 @@ class _AppMangaCarouselState extends State<AppMangaCarousel>
                     child: Text(
                       '《${widget.list[_currentIndex].title?.vietnamese}》${widget.list[_currentIndex].updatedAt}',
                       overflow: TextOverflow.ellipsis,
-                      style: context.textTheme.titleMedium,
+                      style: context.textTheme.subtitle1?.copyWith(
+                          fontWeight: FontWeight.bold, fontSize: 12.sp),
                     ),
                   ),
                   const SizedBox(width: 12),

@@ -65,6 +65,7 @@ dependencies:
   cached_network_image: ^3.2.3
   flutter_cache_manager: ^3.3.0
   carousel_slider: ^4.2.1
+  flutter_screenutil: ^5.6.1
 
 dev_dependencies:
   flutter_test:

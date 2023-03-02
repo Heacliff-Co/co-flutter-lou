@@ -7,6 +7,8 @@ import 'core/app_theme.dart';
 import 'features/app/app_bloc.dart';
 import 'routes/app_router.dart';
 
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 class BondApp extends StatelessWidget {
   const BondApp({Key? key, required this.appRouter}) : super(key: key);
 
@@ -15,23 +17,25 @@ class BondApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final appBloc = context.watch<AppBloc>();
-    return MaterialApp.router(
-      localizationsDelegates: const [
-        GlobalMaterialLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-        GlobalCupertinoLocalizations.delegate,
-        AppLocalizations.delegate,
-      ],
-      locale: appBloc.state.currentLocale,
-      supportedLocales: const [Locale('ar'), Locale('en')],
-      debugShowCheckedModeBanner: true,
-      routerDelegate: appRouter.delegate(
-          // navigatorObservers: navigatorObservers,
-          ),
-      routeInformationParser: appRouter.defaultRouteParser(),
-      theme: appLightThemeData(),
-      darkTheme: appDarkThemeData(),
-      themeMode: appBloc.state.currentThemeMode,
-    );
+    return ScreenUtilInit(
+        designSize: ScreenUtil.defaultSize,
+        builder: (context, child) => MaterialApp.router(
+              localizationsDelegates: const [
+                GlobalMaterialLocalizations.delegate,
+                GlobalWidgetsLocalizations.delegate,
+                GlobalCupertinoLocalizations.delegate,
+                AppLocalizations.delegate,
+              ],
+              locale: appBloc.state.currentLocale,
+              supportedLocales: const [Locale('ar'), Locale('en')],
+              debugShowCheckedModeBanner: true,
+              routerDelegate: appRouter.delegate(
+                  // navigatorObservers: navigatorObservers,
+                  ),
+              routeInformationParser: appRouter.defaultRouteParser(),
+              theme: appLightThemeData(),
+              darkTheme: appDarkThemeData(),
+              themeMode: appBloc.state.currentThemeMode,
+            ));
   }
 }
