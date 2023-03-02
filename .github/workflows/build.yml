@@ -36,6 +36,8 @@ jobs:
           echo "SEND_TIMEOUT=$SEND_TIMEOUT" >> .env
           echo "RECEIVE_TIMEOUT=$RECEIVE_TIMEOUT" >> .env
           echo "RECEIVE_DATA_WHEN_STATUS_ERROR=$RECEIVE_DATA_WHEN_STATUS_ERROR" >> .env
+          echo "SUPABASE_URL=$SUPABASE_URL" >> .env
+          echo "SUPABASE_KEY=$SUPABASE_KEY" >> .env
 
       - name: Create Staging env file
         env:
@@ -52,6 +54,8 @@ jobs:
           echo "SEND_TIMEOUT=$SEND_TIMEOUT" >> .env.staging
           echo "RECEIVE_TIMEOUT=$RECEIVE_TIMEOUT" >> .env.staging
           echo "RECEIVE_DATA_WHEN_STATUS_ERROR=$RECEIVE_DATA_WHEN_STATUS_ERROR" >> .env.staging
+          echo "SUPABASE_URL=$SUPABASE_URL" >> .env.staging
+          echo "SUPABASE_KEY=$SUPABASE_KEY" >> .env.staging
 
       - name: Install Dependencies
         run: flutter pub get
