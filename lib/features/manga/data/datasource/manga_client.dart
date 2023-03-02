@@ -1,5 +1,3 @@
-import 'dart:convert';
-
 import 'package:co_flutter_core/core.dart';
 import 'package:louhie/config/api.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';

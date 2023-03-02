@@ -19,7 +19,6 @@ Manga _$MangaFromJson(Map<String, dynamic> json) => Manga(
       description: json['description'] == null
           ? null
           : Description.fromJson(json['description'] as Map<String, dynamic>),
-      id: json['id'] as int,
       title: json['title'] == null
           ? null
           : Title.fromJson(json['title'] as Map<String, dynamic>),

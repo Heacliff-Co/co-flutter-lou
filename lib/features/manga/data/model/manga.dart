@@ -12,7 +12,6 @@ class Manga extends Model {
   final DateTime? createdAt;
   @JsonKey(name: 'updated_at')
   final DateTime? updatedAt;
-  final int id;
   final CoverImage? coverImage;
   final Title? title;
   final Description? description;
@@ -21,7 +20,6 @@ class Manga extends Model {
       this.updatedAt,
       this.coverImage,
       this.description,
-      required this.id,
       this.title})
       : super(id: -1);
 
