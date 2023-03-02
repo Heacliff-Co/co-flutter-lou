@@ -6,7 +6,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:louhie/core/widgets/app_action_row.dart';
 import 'package:louhie/core/widgets/app_carousel.dart';
 import 'package:louhie/core/widgets/app_manga_collection.dart';
-import 'package:louhie/core/widgets/atom/grid_button.dart';
 import 'package:louhie/features/main/presentation/main_app_bar.dart';
 import 'package:louhie/features/manga/data/model/manga.dart';
 import 'package:louhie/features/manga/presentation/cubit/manga_cubit.dart';
