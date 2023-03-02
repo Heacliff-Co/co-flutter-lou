@@ -11,7 +11,7 @@ ThemeData appDarkThemeData() {
       background: Colors.white54,
       error: Color.fromRGBO(241, 95, 109, 1),
       onPrimary: Colors.white,
-      onSecondary: Colors.white,
+      onSecondary: Colors.black45,
       onSurface: Colors.white,
       onBackground: Colors.white,
       onError: Colors.white,
@@ -107,6 +107,8 @@ ThemeData appDarkThemeData() {
           color: Color.fromRGBO(50, 45, 120, 1),
         ),
       ),
-    ), bottomAppBarTheme: const BottomAppBarTheme(color: Color.fromRGBO(9, 35, 55, 1)),
+    ),
+    bottomAppBarTheme:
+        const BottomAppBarTheme(color: Color.fromRGBO(9, 35, 55, 1)),
   );
 }

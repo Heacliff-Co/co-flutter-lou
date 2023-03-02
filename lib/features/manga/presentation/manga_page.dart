@@ -2,7 +2,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:co_flutter_core/core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:louhie/core/app_carousel.dart';
+import 'package:louhie/core/widgets/app_carousel.dart';
 import 'package:louhie/features/main/presentation/main_app_bar.dart';
 import 'package:louhie/features/manga/presentation/cubit/manga_cubit.dart';
 import 'package:louhie/features/manga/presentation/widgets/manga_item.dart';
@@ -26,7 +26,7 @@ class MangaPage extends StatelessWidget with AutoRouteWrapper {
             if (loading) const CircularProgressIndicator.adaptive(),
             if (!loading)
               AppMangaCarousel(
-                height: 200,
+                height: 180,
                 imageWidth: 150,
                 list: mangaList,
               ),

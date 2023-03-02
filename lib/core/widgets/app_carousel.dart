@@ -2,8 +2,9 @@ import 'dart:ui';
 
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:co_flutter_core/core.dart';
 import 'package:flutter/material.dart';
-import 'package:louhie/core/app_network_image.dart';
+import 'package:louhie/core/widgets/app_network_image.dart';
 import 'package:louhie/features/manga/data/model/manga.dart';
 
 class AppMangaCarousel extends StatefulWidget {
@@ -11,12 +12,14 @@ class AppMangaCarousel extends StatefulWidget {
       {Key? key,
       required this.list,
       required this.height,
-      required this.imageWidth})
+      required this.imageWidth,
+      this.onPress})
       : super(key: key);
 
   final List<Manga> list;
   final double height;
   final double imageWidth;
+  final void Function()? onPress;
 
   @override
   _AppMangaCarouselState createState() => _AppMangaCarouselState();
@@ -25,7 +28,7 @@ class AppMangaCarousel extends StatefulWidget {
 class _AppMangaCarouselState extends State<AppMangaCarousel>
     with AutomaticKeepAliveClientMixin {
   var _currentIndex = 0;
-  final _key = PageStorageKey(0);
+  final _key = const PageStorageKey(0);
 
   @override
   Widget build(BuildContext context) {
@@ -69,7 +72,7 @@ class _AppMangaCarouselState extends State<AppMangaCarousel>
                         sigmaY: 16,
                       ),
                       child: Container(
-                        color: Colors.white.withOpacity(0.2),
+                        color: Colors.white.withOpacity(0.75),
                       ),
                     ),
                   ),
@@ -101,7 +104,7 @@ class _AppMangaCarouselState extends State<AppMangaCarousel>
             width: MediaQuery.of(context).size.width,
             padding:
                 const EdgeInsets.only(left: 8, right: 10, top: 4, bottom: 4),
-            color: Colors.white.withOpacity(0.65),
+            color: context.colorScheme.onSecondary.withOpacity(0.75),
             child: Center(
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -110,6 +113,7 @@ class _AppMangaCarouselState extends State<AppMangaCarousel>
                     child: Text(
                       '《${widget.list[_currentIndex].title?.vietnamese}》${widget.list[_currentIndex].updatedAt}',
                       overflow: TextOverflow.ellipsis,
+                      style: context.textTheme.titleMedium,
                     ),
                   ),
                   const SizedBox(width: 12),
@@ -124,7 +128,10 @@ class _AppMangaCarouselState extends State<AppMangaCarousel>
                           margin: const EdgeInsets.symmetric(horizontal: 2.5),
                           decoration: BoxDecoration(
                             shape: BoxShape.circle,
-                            color: chose ? Colors.black87 : Colors.black26,
+                            color: chose
+                                ? context.colorScheme.onPrimary
+                                : context.colorScheme.onPrimary
+                                    .withOpacity(0.4),
                           ),
                         );
                       },
