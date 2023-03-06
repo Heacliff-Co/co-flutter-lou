@@ -114,7 +114,7 @@ class _AppMangaCarouselState extends State<AppMangaCarousel>
                     child: Text(
                       '《${widget.list[_currentIndex].title?.vietnamese}》${widget.list[_currentIndex].updatedAt}',
                       overflow: TextOverflow.ellipsis,
-                      style: context.textTheme.subtitle1?.copyWith(
+                      style: context.textTheme.titleMedium?.copyWith(
                           fontWeight: FontWeight.bold, fontSize: 12.sp),
                     ),
                   ),

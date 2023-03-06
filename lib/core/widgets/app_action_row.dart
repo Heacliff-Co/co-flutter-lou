@@ -88,7 +88,7 @@ class AppActionRow extends StatelessWidget {
               ),
           text: Text(
             action.text,
-            style: context.textTheme.bodyText1!.copyWith(
+            style: context.textTheme.bodyLarge!.copyWith(
                 fontSize: 10.sp,
                 fontWeight: FontWeight.w500,
                 color: context.colorScheme.onPrimary),

@@ -78,7 +78,7 @@ class IconText extends StatelessWidget {
           crossAxisAlignment: crossAxisAlignment,
           children: [
             pIcon,
-            SizedBox(height: 0, width: this.space),
+            SizedBox(height: 0, width: space),
             pText,
           ],
         );
@@ -90,7 +90,7 @@ class IconText extends StatelessWidget {
           crossAxisAlignment: crossAxisAlignment,
           children: [
             pText,
-            SizedBox(height: 0, width: this.space),
+            SizedBox(height: 0, width: space),
             pIcon,
           ],
         );
@@ -102,7 +102,7 @@ class IconText extends StatelessWidget {
           crossAxisAlignment: crossAxisAlignment,
           children: [
             pIcon,
-            SizedBox(height: this.space, width: 0),
+            SizedBox(height: space, width: 0),
             pText,
           ],
         );
@@ -114,7 +114,7 @@ class IconText extends StatelessWidget {
           crossAxisAlignment: crossAxisAlignment,
           children: [
             pText,
-            SizedBox(height: this.space, width: 0),
+            SizedBox(height: space, width: 0),
             pIcon,
           ],
         );

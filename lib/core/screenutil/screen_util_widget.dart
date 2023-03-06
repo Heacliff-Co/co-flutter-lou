@@ -3,7 +3,7 @@ import 'package:louhie/core/screenutil/screenutil.dart';
 
 class ScreenUtilInit extends StatelessWidget {
   /// A helper widget that initializes [ScreenUtil]
-  ScreenUtilInit({
+  const ScreenUtilInit({
     required this.builder,
     this.designSize = ScreenUtil.defaultSize,
     Key? key,

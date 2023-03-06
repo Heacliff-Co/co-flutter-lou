@@ -10,7 +10,6 @@ import 'package:louhie/features/auth/auth.dart';
 import 'package:louhie/features/main/presentation/main_app_bar.dart';
 import 'package:louhie/features/manga/data/model/manga.dart';
 import 'package:louhie/features/manga/presentation/cubit/manga_cubit.dart';
-import 'package:louhie/features/manga/presentation/widgets/manga_item.dart';
 import 'package:louhie/routes/app_router.dart';
 
 class MangaPage extends StatelessWidget with AutoRouteWrapper {

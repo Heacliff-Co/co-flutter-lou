@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:louhie/core/widgets/atom/icon_text.dart';
 
 class HomepageColumn extends StatelessWidget {
@@ -36,8 +35,8 @@ class HomepageColumn extends StatelessWidget {
                     bottom: headerChildSpace ?? padding.top),
                 child: IconText(
                   icon: Icon(icon, size: 25, color: Colors.orange),
-                  text:
-                      Text(title, style: Theme.of(context).textTheme.subtitle1),
+                  text: Text(title,
+                      style: Theme.of(context).textTheme.titleMedium),
                   space: 8,
                 ),
               ),
@@ -56,7 +55,7 @@ class HomepageColumn extends StatelessWidget {
                           'Xem thêm',
                           style: Theme.of(context)
                               .textTheme
-                              .bodyText2
+                              .bodyMedium
                               ?.copyWith(color: Colors.orange),
                         ),
                         icon: const Icon(
