@@ -105,6 +105,12 @@ class LoginPage extends HookConsumerWidget {
             content: Text(context.localizations.field_login),
           ),
         );
+      } else if (next.error != null) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text(context.localizations.field_login),
+          ),
+        );
       }
     });
   }
