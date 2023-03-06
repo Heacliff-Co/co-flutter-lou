@@ -34,8 +34,11 @@ class IconText extends StatelessWidget {
   }) : super(key: key);
 
   /// Creates a [IconText] in a simple way, note that this is a non-const constructor.
-  IconText.simple(IconData icon, String text)
-      : this(icon: Icon(icon), text: Text(text));
+  IconText.simple(
+    Key? key,
+    IconData icon,
+    String text,
+  ) : this(icon: Icon(icon), text: Text(text), key: key);
 
   /// The icon of this widget.
   final Widget icon;

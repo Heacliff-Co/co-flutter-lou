@@ -23,7 +23,7 @@ class AppMangaCarousel extends StatefulWidget {
   final void Function()? onPress;
 
   @override
-  _AppMangaCarouselState createState() => _AppMangaCarouselState();
+  State<AppMangaCarousel> createState() => _AppMangaCarouselState();
 }
 
 class _AppMangaCarouselState extends State<AppMangaCarousel>

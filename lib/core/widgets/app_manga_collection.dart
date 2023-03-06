@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:louhie/core/widgets/app_network_image.dart';
 import 'package:louhie/core/widgets/atom/full_ripple.dart';
-import 'package:louhie/core/widgets/homepage_column.dart';
 import 'package:louhie/features/manga/data/model/manga.dart';
 
 enum MangaCollectionType {
@@ -18,7 +17,7 @@ class AppMangaCollection extends StatefulWidget {
       : super(key: key);
 
   @override
-  _AppMangaCollectionState createState() => _AppMangaCollectionState();
+  State<AppMangaCollection> createState() => _AppMangaCollectionState();
 
   final MangaCollectionType type;
   final List<Manga> mangaList;
@@ -29,16 +28,11 @@ class _AppMangaCollectionState extends State<AppMangaCollection>
   @override
   Widget build(BuildContext context) {
     super.build(context);
-    late String title;
     late IconData icon;
 
-    List<Widget>? widgets;
     switch (widget.type) {
       case MangaCollectionType.rankings:
-        title = "Rankings";
         icon = Icons.trending_up;
-        widgets =
-            widget.mangaList.map((e) => _buildRankItem(context, e)).toList();
         break;
       default:
     }
