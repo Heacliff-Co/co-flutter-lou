@@ -50,26 +50,26 @@ class _AppMangaCollectionState extends State<AppMangaCollection>
   //   );
   // }
 
-  Widget _buildCover(BuildContext context, int mid, String title, String url,
-      String cover, double width, double height) {
-    return FullRippleWidget(
-      radius: BorderRadius.circular(8),
-      highlightColor: null,
-      splashColor: null,
-      onTap: () {},
-      child: SizedBox(
-        width: width,
-        height: height,
-        child: AppNetworkImage(
-          url: cover,
-          width: width,
-          height: height,
-          radius: BorderRadius.circular(8),
-          border: Border.all(width: 0.7, color: Colors.grey[400]!),
-        ),
-      ),
-    );
-  }
+  // Widget _buildCover(BuildContext context, int mid, String title, String url,
+  //     String cover, double width, double height) {
+  //   return FullRippleWidget(
+  //     radius: BorderRadius.circular(8),
+  //     highlightColor: null,
+  //     splashColor: null,
+  //     onTap: () {},
+  //     child: SizedBox(
+  //       width: width,
+  //       height: height,
+  //       child: AppNetworkImage(
+  //         url: cover,
+  //         width: width,
+  //         height: height,
+  //         radius: BorderRadius.circular(8),
+  //         border: Border.all(width: 0.7, color: Colors.grey[400]!),
+  //       ),
+  //     ),
+  //   );
+  // }
 
   @override
   bool get wantKeepAlive => true;
