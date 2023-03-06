@@ -29,8 +29,8 @@ class MangaPage extends StatelessWidget with AutoRouteWrapper {
                 child: Column(
                 children: [
                   AppMangaCarousel(
-                    height: 180,
-                    imageWidth: 150,
+                    height: 180.h,
+                    imageWidth: 150.w,
                     list: mangaList.take(3).toList(),
                   ),
                   SizedBox(

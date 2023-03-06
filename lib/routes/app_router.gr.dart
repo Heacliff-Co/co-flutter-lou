@@ -103,7 +103,7 @@ class _$AppRouter extends RootStackRouter {
   List<RouteConfig> get routes => [
         RouteConfig(
           MainRoute.name,
-          path: '/',
+          path: '/main-page',
           children: [
             RouteConfig(
               HomeRoute.name,
@@ -157,7 +157,7 @@ class MainRoute extends PageRouteInfo<void> {
   const MainRoute({List<PageRouteInfo>? children})
       : super(
           MainRoute.name,
-          path: '/',
+          path: '/main-page',
           initialChildren: children,
         );
 
