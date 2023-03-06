@@ -3,6 +3,7 @@ library auth;
 import 'package:louhie/features/app/data/app_supbase_data_source.dart';
 import 'package:louhie/features/auth/data/datasource/auth_http_client.dart';
 import 'package:co_flutter_core/core.dart';
+import 'package:supabase_flutter/supabase_flutter.dart' as sup;
 
 import 'data/models/user.dart';
 
@@ -23,4 +24,9 @@ class Auth {
     final response = await sl<AuthHttpClient>().anonymous();
     return response.data;
   }
+
+  static sup.User? userCurrent() =>
+      sl<AppSupabaseDataSource>().supabaseClient.auth.currentUser;
+  static sup.Session? sessionCurrent() =>
+      sl<AppSupabaseDataSource>().supabaseClient.auth.currentSession;
 }

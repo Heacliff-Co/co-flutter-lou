@@ -1,17 +1,17 @@
 import 'package:bloc/bloc.dart';
-import 'package:louhie/features/auth/data/datasource/auth_http_client.dart';
+import 'package:louhie/features/app/data/app_supbase_data_source.dart';
 import 'package:equatable/equatable.dart';
 
 part 'logout_state.dart';
 
 class LogoutCubit extends Cubit<LogoutState> {
-  LogoutCubit(this._authHttpClient) : super(LogoutInitial());
+  LogoutCubit(this.supabase) : super(LogoutInitial());
 
-  final AuthHttpClient _authHttpClient;
+  final AppSupabaseDataSource supabase;
 
   void logout() async {
     emit(const LogoutLoading());
-    final response = await _authHttpClient.logout();
-    emit(LogoutSuccess(response.message));
+    await supabase.supabaseClient.auth.signOut();
+    emit(const LogoutSuccess(""));
   }
 }

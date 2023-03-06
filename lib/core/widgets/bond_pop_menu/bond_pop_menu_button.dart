@@ -74,6 +74,7 @@ class BondPopMenuButton extends StatelessWidget {
         appBloc.add(ChangeLocaleEvent(newLocale));
         break;
       case Menu.logout:
+        print("zo");
         logoutCubit?.logout();
         break;
       case Menu.notifications:
