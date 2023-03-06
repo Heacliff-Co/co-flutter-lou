@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:louhie/core/widgets/app_network_image.dart';
-import 'package:louhie/core/widgets/atom/full_ripple.dart';
 import 'package:louhie/features/manga/data/model/manga.dart';
 
 enum MangaCollectionType {
