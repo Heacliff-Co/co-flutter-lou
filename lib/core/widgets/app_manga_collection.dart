@@ -28,29 +28,27 @@ class _AppMangaCollectionState extends State<AppMangaCollection>
   @override
   Widget build(BuildContext context) {
     super.build(context);
-    late IconData icon;
 
     switch (widget.type) {
       case MangaCollectionType.rankings:
-        icon = Icons.trending_up;
         break;
       default:
     }
     return Container();
   }
 
-  Widget _buildRankItem(BuildContext context, Manga manga) {
-    final width =
-        (MediaQuery.of(context).size.width - 15 * 3) / 2.5; // | ▢ ▢ ▢|
-    final height = width / 3 * 4;
+  // Widget _buildRankItem(BuildContext context, Manga manga) {
+  //   final width =
+  //       (MediaQuery.of(context).size.width - 15 * 3) / 2.5; // | ▢ ▢ ▢|
+  //   final height = width / 3 * 4;
 
-    return Column(
-      children: [
-        _buildCover(context, manga.id, manga.title?.vietnamese ?? "", "",
-            manga.coverImage?.medium ?? "", width, height)
-      ],
-    );
-  }
+  //   return Column(
+  //     children: [
+  //       _buildCover(context, manga.id, manga.title?.vietnamese ?? "", "",
+  //           manga.coverImage?.medium ?? "", width, height)
+  //     ],
+  //   );
+  // }
 
   Widget _buildCover(BuildContext context, int mid, String title, String url,
       String cover, double width, double height) {

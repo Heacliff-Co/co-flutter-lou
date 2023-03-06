@@ -1,7 +1,5 @@
 import 'package:get_it/get_it.dart';
 import 'package:co_flutter_core/core.dart';
-import 'package:louhie/features/app/data/app_supbase_data_source.dart';
-
 import 'data/models/user.dart';
 import 'data/models/user_meta.dart';
 import 'presentation/logout/logout_cubit.dart';
