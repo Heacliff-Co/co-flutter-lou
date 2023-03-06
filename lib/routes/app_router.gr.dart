@@ -37,7 +37,7 @@ class _$AppRouter extends RootStackRouter {
     RegisterRoute.name: (routeData) {
       return MaterialPageX<dynamic>(
         routeData: routeData,
-        child: WrappedRoute(child: const RegisterPage()),
+        child: const RegisterPage(),
       );
     },
     UpdateAppRoute.name: (routeData) {
@@ -103,7 +103,7 @@ class _$AppRouter extends RootStackRouter {
   List<RouteConfig> get routes => [
         RouteConfig(
           MainRoute.name,
-          path: '/',
+          path: '/main-page',
           children: [
             RouteConfig(
               HomeRoute.name,
@@ -157,7 +157,7 @@ class MainRoute extends PageRouteInfo<void> {
   const MainRoute({List<PageRouteInfo>? children})
       : super(
           MainRoute.name,
-          path: '/',
+          path: '/main-page',
           initialChildren: children,
         );
 

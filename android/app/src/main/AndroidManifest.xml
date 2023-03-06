@@ -23,6 +23,8 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
+                <!-- Accepts URIs that begin with YOUR_SCHEME://YOUR_HOST -->
+                <data android:scheme="com.app.louhie" android:host="login-callback" />
             </intent-filter>
         </activity>
         <!-- Don't delete the meta-data below.

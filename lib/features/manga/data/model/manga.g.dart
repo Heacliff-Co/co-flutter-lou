@@ -22,12 +22,13 @@ Manga _$MangaFromJson(Map<String, dynamic> json) => Manga(
       title: json['title'] == null
           ? null
           : Title.fromJson(json['title'] as Map<String, dynamic>),
+      id: json['id'] as int,
     );
 
 Map<String, dynamic> _$MangaToJson(Manga instance) => <String, dynamic>{
+      'id': instance.id,
       'created_at': instance.createdAt?.toIso8601String(),
       'updated_at': instance.updatedAt?.toIso8601String(),
-      'id': instance.id,
       'coverImage': instance.coverImage,
       'title': instance.title,
       'description': instance.description,

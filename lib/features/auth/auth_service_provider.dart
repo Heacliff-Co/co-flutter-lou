@@ -1,11 +1,8 @@
-import 'package:louhie/features/auth/data/datasource/auth_http_client.dart';
 import 'package:get_it/get_it.dart';
 import 'package:co_flutter_core/core.dart';
-
 import 'data/models/user.dart';
 import 'data/models/user_meta.dart';
 import 'presentation/logout/logout_cubit.dart';
-import 'presentation/register/register_bloc.dart';
 
 class AuthServiceProvider extends ServiceProvider {
   @override
@@ -17,9 +14,7 @@ class AuthServiceProvider extends ServiceProvider {
         (User user) => user.toJson(),
       ),
     );
-    it.registerLazySingleton(() => AuthHttpClient(it()));
-
-    it.registerFactory(() => RegisterBloc(it()));
+    // it.registerLazySingleton(() => AppSupabaseDataSource(it()));
 
     it.registerFactory(() => LogoutCubit(it()));
   }

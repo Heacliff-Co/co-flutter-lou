@@ -10,7 +10,7 @@ ThemeData appLightThemeData() {
       background: Colors.black,
       error: Color.fromRGBO(241, 95, 109, 1),
       onPrimary: Colors.black,
-      onSecondary: Colors.black,
+      onSecondary: Colors.white,
       onSurface: Colors.black,
       onBackground: Colors.black,
       onError: Colors.black,

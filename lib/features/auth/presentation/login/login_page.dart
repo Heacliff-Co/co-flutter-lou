@@ -1,11 +1,11 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:louhie/core/app_localizations.dart';
 import 'package:louhie/core/resources/app_assets.dart';
 import 'package:louhie/core/widgets/app_button.dart';
 import 'package:louhie/core/widgets/app_password_text_form_field.dart';
 import 'package:louhie/core/widgets/bond_pop_menu/bond_pop_menu_button.dart';
-import 'package:louhie/features/auth/data/models/user.dart';
-import 'package:louhie/features/auth/data/models/user_meta.dart';
+import 'package:louhie/features/auth/auth.dart';
 import 'package:louhie/features/auth/presentation/login/login_request_provider.dart';
 import 'package:louhie/features/auth/presentation/login/login_screen_presenter.dart';
 import 'package:louhie/routes/app_router.dart';
@@ -13,7 +13,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:co_flutter_core/core.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 import 'new_account_view.dart';
 
 class LoginPage extends HookConsumerWidget {
@@ -41,13 +41,13 @@ class LoginPage extends HookConsumerWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  const SizedBox(height: 64),
+                  SizedBox(height: 64.h),
                   SvgPicture.asset(
                     AppImagesAssets.logo,
-                    width: 95,
-                    height: 120,
+                    width: 95.w,
+                    height: 120.h,
                   ),
-                  const SizedBox(height: 48),
+                  SizedBox(height: 48.h),
                   TextFormField(
                     controller: emailController,
                     keyboardType: TextInputType.emailAddress,
@@ -58,14 +58,14 @@ class LoginPage extends HookConsumerWidget {
                           context.localizations.field_validator_email),
                     ),
                   ),
-                  const SizedBox(height: 12),
+                  SizedBox(height: 12.h),
                   AppPasswordTextFormField(
                     controller: passwordController,
                     hintText: context.localizations.filed_password_label,
                     errorText: loginPresenter.getPasswordErrorText(
                         context.localizations.field_validator_password),
                   ),
-                  const SizedBox(height: 16),
+                  SizedBox(height: 16.h),
                   AppButton(
                     loading: loginRequest.isLoading,
                     onPressed: () {
@@ -82,7 +82,8 @@ class LoginPage extends HookConsumerWidget {
                     },
                     title: context.localizations.login_page_login_button,
                   ),
-                  const SizedBox(height: 16),
+                  SizedBox(height: 16.h),
+                  const Divider(),
                   const NewAccountView(),
                 ],
               ),
@@ -94,11 +95,17 @@ class LoginPage extends HookConsumerWidget {
   }
 
   void _listenerOnLogin(BuildContext context, WidgetRef ref) {
-    ref.listen<AsyncValue<SingleMResponse<User, UserMeta>?>>(
-        loginRequestProvider, (previous, next) {
-      if (next.value?.meta.token != null) {
+    ref.listen<AsyncValue<AuthResponse?>>(loginRequestProvider,
+        (previous, next) {
+      if (next.value?.session != null || Auth.check()) {
         context.router.replaceAll([const MainRoute()]);
       } else if (next.hasError) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text(context.localizations.field_login),
+          ),
+        );
+      } else if (next.error != null) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
             content: Text(context.localizations.field_login),
