@@ -1,24 +1,9 @@
-import 'package:co_flutter_core/core.dart';
-import 'package:louhie/config/api.dart';
-import 'package:supabase_flutter/supabase_flutter.dart';
+import 'package:dio/dio.dart';
+import 'package:retrofit/http.dart';
 
-import '../model/manga.dart';
+part 'manga_client.g.dart';
 
-class MangaClient {
-  final SupabaseClient supabase;
-  MangaClient({required this.supabase});
-
-  Future<ListResponse<Manga>> getTrendingManga() async {
-    final response = (await supabase
-        .from(SupabaseConfig.wdManga)
-        .select()
-        .order(SupabaseConfig.trending, ascending: false)
-        .limit(15));
-
-    List<Manga> mangaList = <Manga>[
-      for (final e in response) Manga.fromJson(e)
-    ];
-
-    return ListResponse(data: mangaList);
-  }
+@RestApi(baseUrl: "")
+abstract class MangaClient {
+  factory MangaClient(Dio dio, {String? baseUrl}) = _MangaClient;
 }
