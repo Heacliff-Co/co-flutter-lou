@@ -2,11 +2,13 @@ import 'dart:developer';
 
 // import 'package:louhie/config/environments.dart';
 // import 'package:louhie/features/auth/auth.dart';
+import 'package:bloc/bloc.dart';
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:co_flutter_core/core.dart';
+import 'package:louhie/core/observers/app_bloc_observer.dart';
 import 'package:louhie/features/auth/auth.dart';
 import 'package:universal_platform/universal_platform.dart';
 import 'package:louhie/routes/app_router.dart';
@@ -15,6 +17,7 @@ import 'injection_container.dart';
 class RunAppTasks extends RunTasks {
   @override
   Future<void> beforeRun(WidgetsBinding widgetsBinding) async {
+    Bloc.observer = AppBlocObserver();
     FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
     await init();
     FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterFatalError;
